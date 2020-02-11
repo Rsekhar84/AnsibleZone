@@ -1,8 +1,6 @@
 ---
-package_name: httpd
-isUpdateRequired: yes
-
-utilities:
-- git
-- tree
-- nano
+- hosts: local
+  become: yes
+  roles:
+    - tomcat
+    - jenkins
